@@ -1,6 +1,4 @@
-
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
@@ -50,7 +48,6 @@ class _AudioDetailsState extends State<AudioDetails> {
                 icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
                 onPressed: () async {
                   if (isPlaying) {
-                    log('=======0');
                     await audioPlayer.pause();
                   } else {
                     await audioPlayer.play(UrlSource('assets/audio/007.mp3'));

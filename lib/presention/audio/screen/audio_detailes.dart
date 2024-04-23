@@ -1,19 +1,21 @@
-import 'package:audioplayers/audioplayers.dart';
+
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class AudioDetails extends StatefulWidget {
-  const AudioDetails({super.key});
+  const AudioDetails({Key? key}) : super(key: key);
 
   @override
   State<AudioDetails> createState() => _AudioDetailsState();
 }
 
 class _AudioDetailsState extends State<AudioDetails> {
-  ///audio...///
-  final audio = AudioPlayer();
   bool isPlaying = false;
-  Duration positon = Duration.zero;
+  Duration position = Duration.zero;
   Duration duration = Duration.zero;
+  final audioPlayer = AudioPlayer();
 
   @override
   Widget build(BuildContext context) {
@@ -25,29 +27,33 @@ class _AudioDetailsState extends State<AudioDetails> {
           children: [
             Center(
               child: Slider(
-                  min: 0,
-                  max: duration.inSeconds.toDouble(),
-                  value: positon.inSeconds.toDouble(),
-                  onChanged: (va) {}),),
+                min: 0,
+                max: duration.inSeconds.toDouble(),
+                value: position.inSeconds.toDouble(),
+                onChanged: (va) {},
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('${positon}'),
-                  Text('${duration - positon }'),
-                ],),
+                  Text('${position}'),
+                  Text('${duration - position}'),
+                ],
+              ),
             ),
-            CircleAvatar(radius: 30,
+            CircleAvatar(
+              radius: 30,
               child: IconButton(
                 iconSize: 40,
                 icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
-                onPressed: ()async{
-                  if(isPlaying){
-                   await audio.pause();
-                  }else{
-                //    String url='';
-                    await  audio.play('' as Source);
+                onPressed: () async {
+                  if (isPlaying) {
+                    log('=======0');
+                    await audioPlayer.pause();
+                  } else {
+                    await audioPlayer.play(UrlSource('assets/audio/007.mp3'));
                   }
                   setState(() {
                     isPlaying = !isPlaying;

@@ -1,3 +1,4 @@
+import 'package:azzkar/presention/audio/screen/audio_detailes.dart';
 import 'package:azzkar/presention/splash/screen/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     home: Splash(),
+     home: AudioDetails(),
     );
   }
 }

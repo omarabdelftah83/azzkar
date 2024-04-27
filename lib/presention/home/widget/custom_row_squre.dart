@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../audio/screen/audio_player.dart';
 import '../../azkar/screen/azkar.dart';
 import '../../quran/screen/quran.dart';
+import '../../rosary/rosary_screen.dart';
 
 class CustomRowSquare extends StatelessWidget {
   const CustomRowSquare({super.key});
@@ -15,7 +16,8 @@ class CustomRowSquare extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => RosaryScreen()));
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 25, top: 0, bottom: 42),

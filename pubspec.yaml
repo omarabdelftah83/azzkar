@@ -38,6 +38,7 @@ dependencies:
   flutter_staggered_grid_view:
   flutter_svg:
   audioplayers: ^6.0.0
+  audio_service: ^0.18.13
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -62,8 +63,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/
-     - assets/audio/
      - assets/Group 35.png
      - assets/Frame 30.png
      - assets/islamic.svg
@@ -77,7 +76,6 @@ flutter:
      - assets/gg.png
      - assets/kk.png
      - assets/Group 79.png
-     - assets/audio/001(2).mp3
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

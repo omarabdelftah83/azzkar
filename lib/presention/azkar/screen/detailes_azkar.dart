@@ -123,10 +123,12 @@ class DetalesAzkar extends StatelessWidget {
                               Flexible(
                                 child: Text(
                                   azkarModel.array[index].text,
+                                  textAlign: TextAlign.right,
                                   style: const TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
+
                                   ),
                                 ),
                               ),

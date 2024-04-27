@@ -469,7 +469,6 @@ class _AudioDetailsState extends State<AudioDetails> {
   final player = AudioPlayer();
 
   testApp()async{
-   // await player.setSource(UrlSource('https://www.kozco.com/tech/piano2-Audacity1.2.5.mp3'));
 
       await player.setSource(AssetSource('assets/audio/coins.mp3'));
 
@@ -490,7 +489,6 @@ class _AudioDetailsState extends State<AudioDetails> {
       ),
       body: Column(
         children: [ElevatedButton(onPressed: ()async {
-       //   await player.play(UrlSource('https://www.kozco.com/tech/piano2-Audacity1.2.5.mp3'));
 
           await player.setSource(AssetSource('assets/audio/coins.mp3'));
         }, child: Text("Click"))],

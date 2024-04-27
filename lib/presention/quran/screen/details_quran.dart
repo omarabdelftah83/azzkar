@@ -12,32 +12,29 @@ class DetalesQuran extends StatelessWidget {
       appBar: AppBar(), // يمكنك إضافة عنوان للشريط العلوي هنا
       body: Container(
         padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: Container(
+        child: SingleChildScrollView( // يسمح بالتمرير للنص الطويل
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.green, width: 2),
                 ),
-                child:Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-
-                    quranModel.ar,textAlign: TextAlign.right,
-                    style: const TextStyle(
-
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  quranModel.ar,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30, // زيادة حجم الخط ليتناسب مع المصحف
+                    height: 1.5, // زيادة المسافات بين الأسطر
                   ),
-
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-          ],
+              const SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
     );

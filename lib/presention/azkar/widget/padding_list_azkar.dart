@@ -12,7 +12,7 @@ class PaddedListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
       child: ListView.builder(
         itemCount: azkarList.length,
         itemBuilder: (context, index) {

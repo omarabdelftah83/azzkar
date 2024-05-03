@@ -59,7 +59,7 @@ class CustomRowSquare extends StatelessWidget {
             InkWell(
               onTap: (){
                 Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Azkar()));
+                    .push(MaterialPageRoute(builder: (context) => AzkarPage()));
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 25, bottom: 50),

@@ -1,8 +1,6 @@
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../../core/const.dart';
 import '../../../data/model/azkar_model.dart';
 import 'details_quran.dart';
@@ -92,7 +90,6 @@ class _AzkarState extends State<Quran> {
                                 ),
                                 const SizedBox(width: 10),
                                 Flexible(
-
                                   child: Text(
                                     quranModel[index].name,
                                     style: const TextStyle(
